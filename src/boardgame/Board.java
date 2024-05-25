@@ -14,21 +14,27 @@ public class Board {
 		pieces = new Piece[rows][columns];
 	}
 
-	protected Integer getRows() {
+	public Integer getRows() {
 		return rows;
 	}
 
-	protected void setRows(Integer rows) {
+	public void setRows(Integer rows) {
 		this.rows = rows;
 	}
 
-	protected Integer getColumns() {
+	public Integer getColumns() {
 		return columns;
 	}
 
-	protected void setColumns(Integer columns) {
+	public void setColumns(Integer columns) {
 		this.columns = columns;
 	}
 	
+	public Piece piece(int row, int column) {
+		return pieces[row][column];
+	}
 	
+	public Piece piece(Position position) {
+		return pieces[position.getRow()][position.getColumn()];
+	}
 }
